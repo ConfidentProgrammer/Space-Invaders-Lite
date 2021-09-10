@@ -1,0 +1,93 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+.app{
+    width: 550px;
+    height: 750px;
+    border: 2px solid  white;  
+   margin: 0 auto;
+   background:url(./bck.jpg);
+   background-size: cover;
+
+}
+.scoreDiv{
+    margin: 0 auto;
+    text-align: center;
+}
+h1{
+    font-size: 3rem;
+    color: white;
+}
+.spaceship {
+    position:absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50px;
+    height: 50px;
+    background:url('./spaceship.png');
+    background-size: cover;
+}
+button{
+    padding: 30px;
+    position: absolute;
+    font-weight: bold;
+    font-size: 2rem;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+.bullet {
+    width: 30px;
+    height: 35px;
+    background:url('./missile.png');
+    transform: rotateZ(180deg);
+    background-size: cover;
+    margin: 0 auto;
+    animation: fire 1.5s  ease-in ;
+}
+.enemyArea{
+    width: 550px;
+    height: 270px;
+  
+    display: flex;
+    flex-wrap: wrap;
+}
+.explosion {
+    width: 70px;
+    height: 70px;
+    background: url('./explode.gif');
+    background-size: cover;
+    display: none;
+}
+.enemy{
+   
+    margin: 5px;
+    width: 300px;
+    height: 200px;
+    background: url('./monster.png');
+    background-size: cover;
+    animation: moveEnemy 5s infinite;
+}
+@keyframes fire {
+    
+    to{
+        margin-top: -1900px;
+    }
+}
+
+@keyframes moveEnemy {
+    0%{
+        margin-left: 20px;
+    }
+    50%{
+        margin-left: 220px;
+    }
+    100%{
+        margin-left: 20px;
+    }
+}
